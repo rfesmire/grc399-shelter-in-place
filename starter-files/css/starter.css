@@ -1,0 +1,439 @@
+/* Starter CSS */
+
+* {
+    box-sizing: border-box; /* because it’s 2019, jen simmons */
+    padding: 0;
+    margin: 0;
+}
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+}
+
+/*hero page*/
+.hero {
+    background-image: url(img/cayucos.jpg);
+    background-size: cover;
+    height: 100vh;
+    background-repeat: no-repeat;
+    padding: 4rem 2rem;
+    display: grid;
+}
+
+.inner-hero{
+    font-family: bely-display, sans-serif;
+    color: #2F718C;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.inner-hero>h1{
+    margin: 20px 5px;
+}
+
+.button{
+    font-family: bely, serif;
+    font-weight: 700;
+    background-color: none;
+    text-align: center;
+    letter-spacing: 1px;
+    padding: 10px;
+    color: #2F718C;
+    border-radius: 100px;
+    border-color: #2F718C;
+    border-width: 2px;
+    border-style: solid;
+    text-decoration: none;
+}
+
+.button:hover{
+    border-color:#2F718C; 
+    border-style: solid;
+    color: #ab7062;
+    text-decoration: none;
+}
+
+/*nav bar*/
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:center;
+    background-color:  #EBD6D3;
+    margin: 0px 0px 50px 0px;
+    width: 100%;
+}
+
+.main-nav{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    width: 100%;
+}
+
+/*.logo{
+    max-width: 75%;
+    height: auto;
+}*/
+
+.main-nav a{
+    text-align: center;
+    display: block;
+    padding: 5px;
+    /*text-transform: uppercase;*/
+    font-family: bely, serif;
+    font-weight: 700;
+    color: #753E32;
+    height: 40px;
+    font-size: 1.15em;
+    text-decoration: underline 1.5px #d8b4ab; 
+    letter-spacing: 2px;
+}
+
+.main-nav a:hover{
+    /*background-color:#d8b0ab;*/
+    text-decoration-style: wavy; 
+}
+
+body {
+    background: #F6E6DC;
+    margin:0;
+    }
+    
+.cardphoto img {
+    display: block;
+    width: 100%;
+    }
+
+
+
+/*cards code*/
+
+.cards{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card{
+    display:flex;
+    flex-direction:column;
+    min-width: 300px;
+    max-width: 350px;
+    /*text-align:center;*/
+    background-color: #EBD6D3;
+    margin: 20px;
+    border-radius: 10px;
+    height: 550px;
+}
+
+.card:hover{
+    transition: all 0.5s ease-in;
+    background-color:#e2c6c3;
+    position: relative;
+    top: -2px;
+}
+
+.cardarticle{
+    margin: 20px;
+}
+
+.cardarticle h1{
+    font-family: bely-display, sans-serif;
+    color: #753E32;
+    font-size: 1.5em;
+    letter-spacing:1px;
+}
+
+.cardarticle p{
+    font-family: bely, serif;
+    font-style: italic;
+    font-size: 1.1em;
+    color: #475443;
+}
+
+.cardfooter a{
+    margin: 20px;
+    text-transform:uppercase;
+    text-decoration: none;
+    font-family: bely, serif;
+    font-weight: 600;
+    color: #475443;
+    font-size: 1.1em;
+    border: solid 1.5px;
+    padding: 5px;
+}
+
+.cardphoto{
+    max-height:400px;
+    overflow: hidden;
+    border-radius: 10px 10px 0px 0px;
+}
+
+/*earrings photo page*/
+.earrings{
+    font-family: bely, serif;
+    letter-spacing: 2px;
+    font-size: 1.5em;
+    color: #753E32;
+    margin-left: 50px;
+}
+
+.earringscolumns img{
+    width: 333px;
+    height: 333px;
+    object-fit: cover;
+    margin-top: 20px;
+}
+
+.earringscolumns article{
+    padding: 20px;
+    color: #753E32;
+    font-family: bely-display, sans-serif;
+    font-size: 1.25em;
+    background-color:#d8b4ab;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    margin-left: 16px;
+    width: 300px;
+    height: 100px;
+}
+
+.earringscolumns h1{
+    text-align: center;
+}
+
+.earringscolumns {
+    display: grid;
+    grid-gap: 1em;
+    margin: 0 auto;
+    max-width: 1100px;
+    justify-content: center;
+  }
+
+/*plant photo page*/
+.lightbox img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.lightbox{
+    display: grid;
+    grid-gap: 1em;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+
+
+@media (min-width: 600px) {
+    .hero{
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+    .inner-hero {
+      grid-column: 2;
+    }
+    .flex-container{
+        display:flex;
+        flex-direction:row;
+        padding:20px;
+    }
+    .main-nav{
+        display:flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .main-nav a{
+        margin: 15px;
+    }
+    /*.logo{
+        min-width:20%;
+        max-width: 25%;
+        height: auto;
+    }*/
+    .earringscolumns {
+        display:grid;
+        grid-template-columns: 1fr, 1fr;
+    }
+    
+    .earring1{
+        grid-column:1;
+        grid-row:1;
+    }
+    .earring2{
+        grid-column:2;
+        grid-row:1;
+    }
+    .earring3{
+        grid-column: 1;
+        grid-row:2;
+    }
+    .earring4{
+        grid-column:2;
+        grid-row: 2;
+    }
+    .earring5{
+        grid-column:1;
+        grid-row:3;
+    }
+    .earring6{
+        grid-column:2;
+        grid-row: 3;
+    }
+
+    /*plants*/
+    .lightbox{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .one{
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .two{
+        grid-row: span 2 / auto;
+    }
+
+    .six{
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .five{
+        grid-row: span 2 / auto;
+    }
+
+    .eleven{
+        grid-row: span 2 / auto;
+    }
+
+    
+
+
+
+}
+
+@media (min-width: 1000px) {
+    .hero{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    .inner-hero {
+      grid-column: 2/4;
+    }
+ 
+    .flex-container{
+        display:flex;
+        flex-direction:row;
+        padding: 20px;
+    }
+    .main-nav{
+        display:flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .main-nav a{
+        margin: 25px;
+    }
+    /*.logo{
+        max-width: 25%;
+        height: auto;
+    }*/
+
+    .earrings{
+        margin-left: 85px;
+    }
+
+    .earringscolumns {
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .earring1{
+        grid-column:1;
+        grid-row:1;
+    }
+    .earring2{
+        grid-column:2;
+        grid-row:1;
+    }
+    .earring3{
+        grid-column: 3;
+        grid-row:1;
+    }
+    .earring4{
+        grid-column:1;
+        grid-row: 2;
+    }
+    .earring5{
+        grid-column:2;
+        grid-row:2;
+    }
+    .earring6{
+        grid-column:3;
+        grid-row:2;
+    }
+    /*plants*/
+    .lightbox{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .one{
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .two{
+        grid-row: span 2 / auto;
+    }
+
+    .three{
+        grid-row: span 2 / auto;
+    }
+    .four{
+        grid-row: span 2 / auto;
+    }
+
+    .six{
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .five{
+        grid-row: span 2 / auto;
+    }
+
+    .eleven{
+        grid-row: span 2 / auto;
+    }    
+
+  }
+
+    /* This is the CSS markup for commenting */
+    
+    /* A one-line comment */
+    
+    /*
+    A comment
+    which stretches
+    over several
+    lines
+    */
+    
+    /* The comment below is used to
+       disable specific styling */
+    
+    /*
+    span {
+      color: blue;
+      font-size: 1.5em;
+    }
+    */
+    /* highlight the item and use Command + slash to comment something out. */
